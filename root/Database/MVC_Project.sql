@@ -1,16 +1,50 @@
+CREATE DATABASE MVC_project;
+USE MVC_project;
 
-create database MVC_Project;
-use MVC_Project;
-CREATE TABLE IF NOT EXISTS doctors (
-    id INT PRIMARY KEY AUTO_INCREMENT,
-    name VARCHAR(255) NOT NULL,
-    position VARCHAR(255) NOT NULL,
-    hospital VARCHAR(255) NOT NULL,
-    image VARCHAR(255) NOT NULL
+CREATE TABLE User (
+  UserId INT PRIMARY KEY AUTO_INCREMENT,
+  Role ENUM('admin', 'doctor', 'patient') NOT NULL,
+  Email VARCHAR(255) UNIQUE NOT NULL,
+  HashPassword VARCHAR(255) NOT NULL,
+  FirstName VARCHAR(255),
+  LastName VARCHAR(255),
+  Phone VARCHAR(20)
 );
 
-INSERT INTO doctors (name, position, hospital, image) VALUES
-('Doctor Name 1', 'Position 1', 'Hospital 1', 'image1.jpg'),
-('Doctor Name 2', 'Position 2', 'Hospital 2', 'image2.jpg'),
-('Doctor Name 3', 'Position 3', 'Hospital 3', 'image3.jpg');
+CREATE TABLE Doctor (
+  DoctorId INT PRIMARY KEY AUTO_INCREMENT,
+  UserId INT NOT NULL,
+  FOREIGN KEY (UserId) REFERENCES User(UserId)
+);
 
+CREATE TABLE Patient (
+  PatientId INT PRIMARY KEY AUTO_INCREMENT,
+  UserId INT NOT NULL,
+  FOREIGN KEY (UserId) REFERENCES User(UserId)
+);
+
+CREATE TABLE Admin (
+  AdminId INT PRIMARY KEY AUTO_INCREMENT,
+  UserId INT NOT NULL,
+  FOREIGN KEY (UserId) REFERENCES User(UserId)
+);
+
+CREATE TABLE Booking (
+  Id INT PRIMARY KEY AUTO_INCREMENT,
+  PatientId INT NOT NULL,
+  DoctorId INT NOT NULL,
+  Options ENUM('Tructiep', 'Zalo') NOT NULL,
+  StartAt DATETIME NOT NULL,
+  EndTimeOption ENUM('0.5', '1', '1.5') NOT NULL,
+  FOREIGN KEY (PatientId) REFERENCES Patient(PatientId),
+  FOREIGN KEY (DoctorId) REFERENCES Doctor(DoctorId)
+);
+
+CREATE TABLE Message (
+  Id INT PRIMARY KEY AUTO_INCREMENT,
+  SenderId INT NOT NULL,
+  ReceiverId INT NOT NULL,
+  MessageType VARCHAR(255) NOT NULL,
+  FOREIGN KEY (SenderId) REFERENCES User(UserId),
+  FOREIGN KEY (ReceiverId) REFERENCES User(UserId)
+);
