@@ -10,6 +10,9 @@ include("../root/JS/home.php");
     </head>
 
 <body>
+
+
+
     <div id="slider">
         <div class="slides">
             <?php foreach ($doctors as $doctor) : ?>
