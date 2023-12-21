@@ -1,11 +1,11 @@
-class Input
+class emailInput
 {
     #label
     #customClass
     #type = "text"
 
     static new () {
-        var newInput = new Input()
+        var newInput = new emailInput()
         return newInput
     }
 
@@ -16,7 +16,7 @@ class Input
     var labelElement = document.createElement("label");
     labelElement.setAttribute("for", "email");
     labelElement.setAttribute("class", "block text-sm font-medium text-neutral-600");
-    labelElement.textContent = "Email address";
+    labelElement.textContent = "Email";
 
     // Create a nested div element
     var innerDivElement = document.createElement("div");
@@ -29,8 +29,8 @@ class Input
     inputElement.setAttribute("type", "email");
     inputElement.setAttribute("autocomplete", "email");
     inputElement.setAttribute("required", "");
-    inputElement.setAttribute("placeholder", "Your Email");
-    inputElement.setAttribute("class", "block w-full px-5 py-3 text-base text-neutral-600 placeholder-gray-300 transition duration-500 ease-in-out transform border border-transparent rounded-lg bg-gray-50 focus:outline-none focus:border-transparent focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-300");
+    inputElement.setAttribute("placeholder", "Email của bạn");
+    inputElement.setAttribute("class", "block w-full px-3 py-2 mt-2 mb-4 text-base text-neutral-600 placeholder-gray-500 transition duration-500 ease-in-out transform border border-transparent rounded-lg bg-gray-200 focus:outline-none focus:border-transparent focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-300");
 
     // Append label to inner div
     innerDivElement.appendChild(labelElement);
