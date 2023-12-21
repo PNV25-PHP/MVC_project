@@ -12,7 +12,7 @@
     <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
 
 
-    <title>Register - page</title>
+    <title>Login - page</title>
 
 </head>
 
@@ -43,10 +43,7 @@
 </body>
 
 <script src="./Test/Components/Button.js"></script>
-<script src="./Test/Components/emailInput.js"></script>
-<script src="./Test/Components/passwordInput.js"></script>
-
-
+<script src="./Test/Components/Input.js"></script>
 
 <script>
     Button
@@ -57,14 +54,30 @@
         .setCustomClass("mt-10 mb-3 px-1 py-1 text-white flex justify-center items-center")
         .setLabel("Tiếp tục")
         .appendTo("button")
-    emailInput
+    Input
         .new()
-        .setLabel("Email")
-        .setCustomClass("mt-5")
-        .appendTo("inputEmail");
-    passwordInput
+        .setID("email")
+        .setName("email")
+        .setType("email")
+        .setPlaceholder("Email của bạn")
+        .setCustomClass("mt-5 block px-3 py-2 mt-2 mb-4 w-full")
+        // set label
+        .setContent("Email")
+        .setForlabel("email")
+        // appendTo
+        .appendTo("inputEmail")
+        
+    Input
         .new()
-        .setLabel("Mật khẩu")
+        .setID("password")
+        .setName("password")
+        .setType("password")
+        .setPlaceholder("Nhập mật khẩu của bạn")
+        .setCustomClass("mt-5 block px-3 py-2 mt-2 mb-4 w-full")
+        // set label
+        .setContent("Password")
+        .setForlabel("password")
+        // appendTo
         .appendTo("inputPassword")
 </script>
 

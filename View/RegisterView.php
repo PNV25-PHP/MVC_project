@@ -15,7 +15,7 @@
 
 <body>
     <div class="container">
-        <div class="grid-cols-2 flex">
+        <div class="grid-cols-1 flex">
             <!-- bên phải -->
             <div class="block_contain-lefl col-span-1">
                 <span class="material-symbols-outlined">arrow_back</span>
@@ -23,20 +23,14 @@
                 <p id="instructure">Nhập thông tin của bạn </p>
                 <!-- nhập thông tin -->
                 <form action="" method="post" id="form">
-                    <label>Họ tên:</label>
-                    <input class="form-info" name="" value="" placeholder="" type="text">
-                    <label>Email:</label>
-                    <input class="form-info" name="" value="" placeholder="" type="email">
-                    <label>Số điện thoại:</label>
-                    <input class="form-info" name="" value="" placeholder="" type="text">
-                    <label>Mật Khẩu:</label>
-                    <input class="form-info" name="" value="" placeholder="" type="password">
-                    <label>Nhập lại mật khẩu:</label>
-                    <input class="form-info" name="" value="" placeholder="" type="password">
-                    <!-- <input type="submit" id="sub" value="Đăng ký"></input> -->
-                    
+                    <div id="name"></div>
+                    <div id="em"></div>
+                    <div id="sdt"></div>
+                    <div id="mk1"></div>
+                    <div id="mk2"></div>
                 </form>
-                <p>Bạn đã có tài khoản?<a href=""><span> Đăng nhập ngay</span></a></p>
+                <div id="nut"></div>
+                <p id="fogettext">Bạn đã có tài khoản?<a href="../send_email.php">Đăng nhập ngay</a></p>
             </div>
             <!-- bên trái -->
             <div class="block_contain-right col-span-1">
@@ -46,15 +40,54 @@
         </div>
     </div>
     <script src="../Test/Components/Button.js"></script>
+    <script src="../Test/Components/Input.js"></script>
     <script>
         Button2
             .new()
             .setLabel("Đăng ký")
+            .setcustomClass("text-center")
             .setid("sub")
-            // .setcustomClass("p-2 rounded-2xl bg-blue-500 w-19 h-30")
             .setOnClick("../../login.php")
-            .appendTo("form")
+            .appendTo("nut")
+
+        Input
+            .new()
+            .setPlaceholder("Nhập tên của bạn")
+            .setContent("Họ tên:")
+            .setForlabel("name")
+            .appendTo("name")
+
+        Input
+            .new()
+            .setType("email")
+            .setPlaceholder("Nhập mật khẩu của bạn")
+            .setContent("Email:")
+            .setForlabel("email")
+            .appendTo("em")
+
+        Input
+            .new()
+            .setPlaceholder("Nhập số điện của bạn")
+            .setContent("Số điện thoại:")
+            .setForlabel("Number")
+            .appendTo("sdt")
+
+        Input
+            .new()
+            .setType("password")
+            .setPlaceholder("Nhập mật khẩu của bạn")
+            .setContent("Mật Khẩu:")
+            .setForlabel("password")
+            .appendTo("mk1")
+
+        Input
+            .new()
+            .setType("password")
+            .setPlaceholder("Nhập lại mật khẩu của bạn")
+            .setContent("Nhập lại mật khẩu:")
+            .setForlabel("password")
+            .appendTo("mk2")
     </script>
 </body>
-    
+
 </html>

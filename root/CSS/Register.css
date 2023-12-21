@@ -4,11 +4,12 @@
 }
 
 .block_contain-lefl {
-    width: 795px;
+    width: 60%;
+    text-align: center;
 }
 
 .block_contain-right {
-    width: 630px;
+    width: 40%;
     background: #C3C8CF;
 }
 
@@ -18,51 +19,55 @@
 
 #form {
     display: grid;
-    width: 676px;
-    margin: 5% 10%; 
+    width: 60%;
+    margin: 0% 15%; 
     gap: 5px;
 }
 
-#form>#sub {
-    margin: 0 23%;
-    margin-top: 20px;
+#form>div{
+    margin: 5px 0px;
+    width: 60%;
+}
+
+#sub {
+    margin: 0 25%;
+    margin-top: 5px;
+    text-align: center !important;
     cursor: pointer;
-    padding: 2px;
     border-radius: 10px;
     background-color: #4285F4;
     width: 175px;
-    height: 30px;
+    height: 40px;
 }
 
-.form-info {
-    width: 500px;
-    height: 30px;
-    border: 1px solid black;
+div>label {
+    width: 200%;
     border-radius: 5px;
     text-align: left !important;
-    padding: 10px;
+    margin: 1px 0px;
+}
+
+div>input{
+    width: 200%;
+    height: 40px;
+    border-radius: 5px;
+    text-align: left !important;
+    margin: 1px 0px;
+}
+
+
+p>a{
+    align-items: center; 
+    justify-content: center;
+    
+    color: #1e40af;
+    font-style: italic;
+    margin-bottom: 0.5rem;
 }
 
 p,
 h3 {
     text-align: center;
-}
-
-label {
-    color: #000;
-    font-family: Poppins;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-}
-
-span {
-    color: #1C3AA9;
-    font-family: Poppins;
-    font-size: 20px;
-    font-style: italic;
-    line-height: normal;
-    font-weight: 200;
 }
 
 .title {
@@ -82,9 +87,6 @@ span {
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-}
-
-#front-text {
     margin: 10% 0px 10% 0px;
 }
 
@@ -92,25 +94,5 @@ img {
     width: 100%;
 }
 
-@media screen and (max-width: 768px) {
-    .block_contain-right {
-        display: none;
-    }
-
-    .form-info {
-        width: 70%;
-        height: 30px;
-        border: 1px solid black;
-        border-radius: 5px;
-        text-align: left !important;
-        padding: 10px;
-    }
-
-    #form>input:last-child {
-        padding: 2px;
-        border-radius: 10px;
-        background-color: #4285F4;
-        width: 175px;
-        height: 30px;
-    }
+@media screen and (max-width: 0px) {
 }

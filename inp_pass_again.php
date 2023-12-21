@@ -11,7 +11,7 @@
     </style>
     <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
 
-    <title>Register - page</title>
+    <title>Passwork Verifi.. - page</title>
     <style>
         .container {
             width: 100%;

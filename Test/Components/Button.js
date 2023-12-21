@@ -47,7 +47,7 @@ class Button2{
     #label
     #id
     #onClick
-    #customClass
+    #customClass = " "
 
     static new(){
         let compo_Button = new Button2();
