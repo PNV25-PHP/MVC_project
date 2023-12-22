@@ -42,8 +42,8 @@
     </div>
 </body>
 
-<script src="./Test/Components/Button.js"></script>
-<script src="./Test/Components/Input.js"></script>
+<script src="../Test/Components/Button.js"></script>
+<script src="../Test/Components/Input.js"></script>
 
 <script>
     Button
