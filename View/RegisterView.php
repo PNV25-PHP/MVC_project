@@ -16,9 +16,9 @@
 <body>
     <div class="container">
         <div class="grid-cols-1 flex">
+            <a href=""><span class="material-symbols-outlined">arrow_back</span></a>
             <!-- bên phải -->
             <div class="block_contain-lefl col-span-1">
-                <span class="material-symbols-outlined">arrow_back</span>
                 <h3 class="title">Mental Health Care</h3>
                 <p id="instructure">Nhập thông tin của bạn </p>
                 <!-- nhập thông tin -->
